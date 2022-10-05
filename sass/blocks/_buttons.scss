@@ -1,0 +1,64 @@
+.btnMin {
+  width: 128px;
+  height: 49px;
+  border-radius: 100px;
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
+    #ffffff;
+  padding: 13px 43px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: (22/15);
+  color: #ffffff;
+}
+.btnMid {
+  width: 225px;
+  height: 79px;
+  border-radius: 27px;
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
+    #ffffff;
+  padding: 24px 54px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: (30/20);
+  color: #ffffff;
+}
+.btnMidExtended {
+  width: 263px;
+  height: 91px;
+  border-radius: 27px;
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
+    #ffffff;
+  padding: 26px 47px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: (38/25);
+  color: #fefefe;
+}
+.btnMax {
+  width: 300px;
+  height: 105px;
+  border-radius: 35px;
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
+    #ffffff;
+  padding: 33px 86px;
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: (38/25);
+}
+
+.btnMin,
+.btnMidExtended,
+.btnMid,
+.btnMax {
+  transition: 0.3s all ease-in;
+}
+
+.btnMin:hover,
+.btnMidExtended:hover,
+.btnMid:hover,
+.btnMax:hover {
+  color: #a3a2a2f8;
+  background: linear-gradient(129.54deg, #e45c2fe5 15.57%, #97342fe8 95.03%),
+    #ffffff;
+}

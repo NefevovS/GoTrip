@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import "../sass/reset";
+@import "../sass/vars";
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f6f6;
+  color: #0f1f1c;
+}
+
+.none {
+  display: none !important;
+}
+
+.container {
+  max-width: $container__width;
+  padding: 0 $container__padding;
+  margin: 0 auto;
+}
+.container__right {
+  padding-left: calc((100% - $container__width) / 2 + $container__padding);
+}
+
+@import "../sass/blocks/header";
+@import "../sass/blocks/buttons";
