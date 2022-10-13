@@ -144,6 +144,7 @@ body {
   background: linear-gradient(132.05deg, #428e5f -17.38%, #112120 78.4%);
   position: relative;
   padding: 54px 100px;
+  overflow: hidden;
 }
 .header::after {
   content: "";
@@ -161,6 +162,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  position: relative;
+  z-index: 5;
 }
 
 .title__companyName {
@@ -170,27 +175,49 @@ body {
   color: #ffffff;
 }
 
+.title__nav {
+  max-width: 462px;
+}
+
 .title__nav ul {
   display: flex;
   justify-content: space-between;
-}
-.title__nav ul li + li {
-  margin-left: 80px;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
 }
 .title__nav ul a {
   color: #ffffff;
   transition: 0.3s all ease-in;
-}
-.title__nav ul a:hover {
-  color: rgba(163, 162, 162, 0.9725490196);
+  position: relative;
 }
 
+.title__nav a.active::after,
+.title__nav a:hover::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: white;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.title__login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .title__login a {
   color: #ffffff;
   transition: 0.3s all ease-in;
 }
 .title__login a:hover {
-  color: rgba(163, 162, 162, 0.9725490196);
+  color: rgba(54, 190, 36, 0.8823529412);
+}
+.title__login:first-child {
+  width: 57px;
 }
 .title__login a + a {
   margin-left: 25px;
@@ -198,6 +225,67 @@ body {
 
 .btn {
   background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+}
+
+.headerContentRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__badge {
+  margin-top: 97px;
+  margin-bottom: 7px;
+  display: inline-block;
+  width: 227px;
+  height: 50px;
+  border-radius: 15px;
+  padding: 11px 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5 px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+}
+
+.header__heading {
+  display: block;
+  max-width: 592px;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 82px;
+  color: #ffffff;
+}
+
+.header__text {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 95px;
+  max-width: 519px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 38px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.header__img {
+  flex-grow: 1;
+  position: relative;
+}
+
+.header__img img {
+  max-width: unset;
+  width: 894px;
+  height: 940px;
+  position: absolute;
+  top: -80px;
+  left: -150px;
 }
 
 .btnMin {
@@ -217,7 +305,7 @@ body {
   height: 79px;
   border-radius: 27px;
   background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #ffffff;
-  padding: 24px 54px;
+  padding: 24px 44px;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
@@ -261,4 +349,79 @@ body {
 .btnMax:hover {
   color: rgba(163, 162, 162, 0.9725490196);
   background: linear-gradient(129.54deg, rgba(228, 92, 47, 0.8980392157) 15.57%, rgba(151, 52, 47, 0.9098039216) 95.03%), #ffffff;
+}
+
+.destinations {
+  padding-top: 96px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+.destinations__row {
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+
+.destinations__subtitle {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 45px;
+  color: #0f1f1c;
+}
+
+.destinations__title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 82px;
+  color: #0f1f1c;
+}
+
+.destinations__text {
+  margin-bottom: 60px;
+  width: 456px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 38px;
+  color: #0f1f1c;
+  opacity: 0.5;
+}
+
+.destinations__btn {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fefefe;
+}
+
+.slider {
+  width: 1110px;
+}
+
+.slider__item {
+  width: 335px;
+  height: 402px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 35px;
+  transition: all 0.3s ease-in;
+  margin-top: 27px;
+}
+
+.slider .center .slider__item {
+  width: 380px;
+  height: 456px;
+  margin-top: 0;
+}
+
+.slider__btn {
+  display: block;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #8b8b8b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

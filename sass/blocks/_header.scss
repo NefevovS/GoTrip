@@ -3,6 +3,7 @@
   background: linear-gradient(132.05deg, #428e5f -17.38%, #112120 78.4%);
   position: relative;
   padding: 54px 100px;
+  overflow: hidden;
   &::after {
     content: "";
     background-image: url(/img/header/header_bottom.svg);
@@ -20,38 +21,57 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 80px;
+  position: relative;
+  z-index: 5;
 }
 .title__companyName {
   font-weight: 700;
   font-size: 20px;
   line-height: (30/20);
-
   color: #ffffff;
+}
+.title__nav {
+  max-width: 462px;
 }
 .title__nav ul {
   display: flex;
   justify-content: space-between;
-  & li + li {
-    margin-left: 80px;
-  }
+  column-gap: 80px;
 
   & a {
     color: #ffffff;
     transition: 0.3s all ease-in;
-    &:hover {
-      color: #a3a2a2f8;
-    }
+    position: relative;
   }
 }
-.active {
+.title__nav a.active,
+.title__nav a:hover {
+  &::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: white;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
 }
 .title__login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   & a {
     color: #ffffff;
     transition: 0.3s all ease-in;
-    &:hover {
-      color: #a3a2a2f8;
-    }
+  }
+  & a:hover {
+    color: #36be24e1;
+  }
+  &:first-child {
+    width: 57px;
   }
 
   & a + a {
@@ -60,4 +80,62 @@
 }
 .btn {
   background: $backgroundBtn;
+}
+
+.headerContentRow {
+  display: flex;
+  justify-content: space-between;
+}
+.headerContent {
+  display: flex;
+  flex-direction: column;
+}
+.header__badge {
+  margin-top: 97px;
+  margin-bottom: 7px;
+  display: inline-block;
+  width: 227px;
+  height: 50px;
+  border-radius: 15px;
+
+  padding: 11px 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: (27/18) px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+}
+.header__heading {
+  display: block;
+  max-width: 592px;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 82px;
+  color: #ffffff;
+}
+.header__text {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 95px;
+  max-width: 519px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 38px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.header__btn {
+}
+.header__img {
+  flex-grow: 1;
+  position: relative;
+}
+.header__img img {
+  max-width: unset;
+  width: 894px;
+  height: 940px;
+  position: absolute;
+  top: -80px;
+  left: -150px;
 }
