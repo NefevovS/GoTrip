@@ -42,6 +42,8 @@
 
 .slider {
   width: 1110px;
+  height: 456px;
+  position: relative;
 }
 
 .slider__item {
@@ -60,13 +62,24 @@
 }
 .slider__btn {
   display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
   width: 68px;
   height: 68px;
   border-radius: 50%;
   background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
     #8b8b8b;
-
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.slider__btn--prev {
+  left: -27px;
+}
+.slider__btn--next {
+  right: -27px;
 }

@@ -121,7 +121,7 @@ legend {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f6f6f6;
+  background-color: #e5e5e5;
   color: #0f1f1c;
 }
 
@@ -397,6 +397,8 @@ body {
 
 .slider {
   width: 1110px;
+  height: 456px;
+  position: relative;
 }
 
 .slider__item {
@@ -417,6 +419,10 @@ body {
 
 .slider__btn {
   display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
   width: 68px;
   height: 68px;
   border-radius: 50%;
@@ -424,4 +430,109 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.slider__btn--prev {
+  left: -27px;
+}
+
+.slider__btn--next {
+  right: -27px;
+}
+
+.customers {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.customers__row {
+  display: flex;
+  -moz-column-gap: 68px;
+       column-gap: 68px;
+}
+
+.customers__img {
+  width: 478px;
+  height: 537px;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.customers__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.customers__content__title {
+  max-width: 565px;
+  margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 68px;
+  color: #0f1f1c;
+}
+
+.customers__content__customer {
+  display: flex;
+  -moz-column-gap: 33px;
+       column-gap: 33px;
+  margin-bottom: 60px;
+}
+
+.customer__avatar {
+  width: 134px;
+  height: 134px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: rgba(219, 88, 36, 0.9333333333);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.customer__info {
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.customer__name {
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 50px;
+  /* identical to box height */
+  color: #0f1f1c;
+}
+
+.customer__adress {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 38px;
+  color: #0f1f1c;
+  opacity: 0.5;
+}
+
+.content__text {
+  max-width: 491px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  color: #0f1f1c;
+  opacity: 0.5;
+  margin-bottom: 30px;
+}
+
+.content__rating__row {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.content__rating__row {
+  fill: #c4c4c4;
+}
+
+.content__rating__row svg:nth-child(1),
+.content__rating__row svg:nth-child(2),
+.content__rating__row svg:nth-child(3) {
+  fill: #ffd336;
 }/*# sourceMappingURL=main.css.map */
