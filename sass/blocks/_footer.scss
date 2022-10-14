@@ -1,0 +1,23 @@
+.footer {
+  margin-top: 35px;
+  margin-bottom: 74px;
+}
+.title__companyName--footerColor {
+  color: rgba(255, 124, 78, 1);
+}
+.title__nav--footerColor ul a {
+  color: #0f1f1c;
+  opacity: 0.5;
+  &.active,
+  &:hover {
+    &::after {
+      background-color: #838b89;
+    }
+  }
+}
+.title__login--footerColor > a:first-child {
+  color: #838b89;
+  &:hover {
+    color: #36be24e1;
+  }
+}

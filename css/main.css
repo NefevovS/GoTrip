@@ -213,6 +213,9 @@ body {
   color: #ffffff;
   transition: 0.3s all ease-in;
 }
+.title__login a:first-child {
+  width: 60px;
+}
 .title__login a:hover {
   color: rgba(54, 190, 36, 0.8823529412);
 }
@@ -349,6 +352,10 @@ body {
 .btnMax:hover {
   color: rgba(163, 162, 162, 0.9725490196);
   background: linear-gradient(129.54deg, rgba(228, 92, 47, 0.8980392157) 15.57%, rgba(151, 52, 47, 0.9098039216) 95.03%), #ffffff;
+}
+
+.btn__form {
+  margin-right: 15px;
 }
 
 .destinations {
@@ -592,4 +599,66 @@ body {
   color: #0f1f1c;
   opacity: 0.5;
   margin-bottom: 60px;
+}
+
+.subscribe {
+  margin-top: 35px;
+}
+
+.subscribe__title {
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 82px;
+  color: #0f1f1c;
+}
+
+.subscribe__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe__form {
+  margin-bottom: 106px;
+  background-color: #fff;
+  width: 800px;
+  height: 129px;
+  border-radius: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__email {
+  margin: 46px 46px;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #0f1f1c;
+}
+
+.footer {
+  margin-top: 35px;
+  margin-bottom: 74px;
+}
+
+.title__companyName--footerColor {
+  color: rgb(255, 124, 78);
+}
+
+.title__nav--footerColor ul a {
+  color: #0f1f1c;
+  opacity: 0.5;
+}
+.title__nav--footerColor ul a.active::after, .title__nav--footerColor ul a:hover::after {
+  background-color: #838b89;
+}
+
+.title__login--footerColor > a:first-child {
+  color: #838b89;
+}
+.title__login--footerColor > a:first-child:hover {
+  color: rgba(54, 190, 36, 0.8823529412);
 }/*# sourceMappingURL=main.css.map */

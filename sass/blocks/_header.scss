@@ -64,6 +64,9 @@
   justify-content: space-between;
   align-items: center;
   & a {
+    &:first-child {
+      width: 60px;
+    }
     color: #ffffff;
     transition: 0.3s all ease-in;
   }
@@ -125,8 +128,7 @@
   color: #ffffff;
   opacity: 0.5;
 }
-.header__btn {
-}
+
 .header__img {
   flex-grow: 1;
   position: relative;
